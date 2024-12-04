@@ -3,7 +3,7 @@ import "./App.css";
 import { DayChallenge, Home } from "./screens";
 
 function App() {
-  const DAY_AMOUNT = 2;
+  const DAY_AMOUNT = 3;
   const [day, setDay] = useState(-1);
 
   return (
