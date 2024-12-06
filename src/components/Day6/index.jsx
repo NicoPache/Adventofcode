@@ -15,7 +15,7 @@ const DaySix = () => {
   }, []);
 
   const solve = (input) => {
-    setResult(acum);
+    setResult("solving.. try other day");
   };
 
   return <div>{result}</div>;

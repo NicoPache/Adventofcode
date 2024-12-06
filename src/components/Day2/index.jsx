@@ -3,13 +3,14 @@ import React from "react";
 import archivo from "../constants/day2.txt";
 
 const DayTwo = () => {
+  const [result, setResult] = useState("");
   useEffect(() => {
     fetch(archivo)
       .then((response) => response.text())
       .then((text) => {
         const input = text;
 
-        solve(input, 1);
+        //solve(input, 1);
         solve(input, 2);
       })
       .catch((error) => console.error("Error leyendo el archivo :(", error));
@@ -44,10 +45,10 @@ const DayTwo = () => {
       const nums = line.split(" ").map(Number);
       counts += +isSafe(nums);
     }
-    console.log(counts);
+    setResult(counts);
   }
 
-  return <div>{"ejecicio 2"}</div>;
+  return <div>{result}</div>;
 };
 
 export default DayTwo;
